@@ -28,9 +28,10 @@ public class conecta {
  
  }catch(Exception e){
  
- System.out.printf(e.getMessage());
-  JOptionPane.showMessageDialog(null,e,"ERROR DE CONEXION", ERROR_MESSAGE);
-System.out.println("conectado");
+  System.out.printf(e.getMessage());
+  //JOptionPane.showMessageDialog(null,e,"ERROR DE CONEXION", ERROR_MESSAGE);
+  System.out.println(e);
+  System.out.println("conectado");
  
  }
  return conectar;

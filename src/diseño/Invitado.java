@@ -16,6 +16,7 @@ public class Invitado extends javax.swing.JFrame {
      */
     public Invitado() {
         initComponents();
+        this.setLocation(200, 50);
     }
 
     /**
@@ -27,9 +28,9 @@ public class Invitado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         lblconectado = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -42,20 +43,20 @@ public class Invitado extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(153, 0, 51));
+        jLabel2.setText("Usuario Conectado:");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jLabel1.setBackground(new java.awt.Color(204, 0, 51));
+
+        javax.swing.GroupLayout jLabel1Layout = new javax.swing.GroupLayout(jLabel1);
+        jLabel1.setLayout(jLabel1Layout);
+        jLabel1Layout.setHorizontalGroup(
+            jLabel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+        jLabel1Layout.setVerticalGroup(
+            jLabel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 473, Short.MAX_VALUE)
         );
-
-        jLabel1.setText("Usuario Conectado:");
 
         jMenu1.setIcon(new javax.swing.ImageIcon("C:\\Users\\zabdy\\Documents\\tienda\\src\\Imagenes\\mantenimiento.jpg")); // NOI18N
         jMenu1.setText("Mantenimiento");
@@ -125,23 +126,21 @@ public class Invitado extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblconectado, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 274, Short.MAX_VALUE)))
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(lblconectado, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(655, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel1)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
                     .addComponent(lblconectado, javax.swing.GroupLayout.PREFERRED_SIZE, 13, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -170,15 +169,15 @@ public class Invitado extends javax.swing.JFrame {
         // TODO add your handling code here:
         Productos pro = new Productos();
 
-        jPanel1.add(pro);
+        jLabel1.add(pro);
     pro.show();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-        TbVenta pro = new TbVenta();
+        Boleta2 pro = new Boleta2();
 
-        jPanel1.add(pro);
+        jLabel1.add(pro);
     pro.show();
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
@@ -187,7 +186,7 @@ public class Invitado extends javax.swing.JFrame {
         // TODO add your handling code here:
                 IngresoCliente pro = new IngresoCliente();
 
-        jPanel1.add(pro);
+        jLabel1.add(pro);
     pro.show();
 
     }//GEN-LAST:event_jMenuItem5ActionPerformed
@@ -228,7 +227,8 @@ public class Invitado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    public static javax.swing.JDesktopPane jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -238,7 +238,6 @@ public class Invitado extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JPanel jPanel1;
     public static javax.swing.JLabel lblconectado;
     // End of variables declaration//GEN-END:variables
 }

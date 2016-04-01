@@ -47,11 +47,10 @@ public class Inicio extends javax.swing.JFrame {
         btnaceptar = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
         txtcontra = new javax.swing.JPasswordField();
-        cboad = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(500, 200));
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 51));
 
@@ -106,17 +105,6 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        cboad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Invitado" }));
-        cboad.setSelectedIndex(-1);
-        cboad.setToolTipText("");
-        cboad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cboadActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("puesto:");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -126,29 +114,26 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnaceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(btnaceptar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtusuario)
-                            .addComponent(txtcontra, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE))
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel3))
+                            .addComponent(txtcontra, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGap(29, 29, 29))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cboad, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -156,14 +141,8 @@ public class Inicio extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtcontra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cboad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnaceptar)
                     .addComponent(btnsalir))
@@ -176,11 +155,17 @@ public class Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -190,8 +175,8 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         String usu=txtusuario.getText();
         String pas=new String(txtcontra.getPassword());
-         String  AD=cboad.getSelectedItem().toString();
-        acceder(usu, pas,AD);
+         
+        acceder(usu, pas);
     }//GEN-LAST:event_btnaceptarActionPerformed
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
@@ -219,8 +204,8 @@ public class Inicio extends javax.swing.JFrame {
                if (evt.getKeyCode()==evt.VK_ENTER){
         String usu=txtusuario.getText();
         String pas=new String(txtcontra.getPassword());
-         String  AD=cboad.getSelectedItem().toString();
-        acceder(usu, pas,AD);      
+        
+        acceder(usu, pas);      
         
         
         }
@@ -233,25 +218,16 @@ public class Inicio extends javax.swing.JFrame {
                if (evt.getKeyCode()==evt.VK_ENTER){
         String usu=txtusuario.getText();
         String pas=new String(txtcontra.getPassword());
-        String  AD=cboad.getSelectedItem().toString();
-        acceder(usu, pas,AD);      
+        
+        acceder(usu, pas);      
         
         
         }
     }//GEN-LAST:event_btnaceptarKeyPressed
-
-    private void cboadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboadActionPerformed
-        // TODO add your handling code here:
-         
-        String usu=txtusuario.getText();
-        String pas=new String(txtcontra.getPassword());
-        String  AD=cboad.getSelectedItem().toString();
-        acceder(usu, pas,AD);  
-         
-    }//GEN-LAST:event_cboadActionPerformed
-    void acceder(String usuario, String pass, String cbo)    {
+    void acceder(String usuario, String pass)    {
         
-        String cap=cbo;
+        String cap="";
+                
         String sql="SELECT *  FROM users WHERE user_name='"+usuario+"' && user_password='"+pass+"'";
         try {
             Statement st = cn.createStatement();
@@ -294,8 +270,8 @@ public class Inicio extends javax.swing.JFrame {
 void po(){
         String usu=txtusuario.getText();
         String pas=new String(txtcontra.getPassword());
-         String  AD=cboad.getSelectedItem().toString();
-        acceder(usu, pas,AD);      
+        
+        acceder(usu, pas);      
 
 
 }
@@ -331,7 +307,7 @@ void po(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Inicio().setVisible(true);
-                JOptionPane.showMessageDialog(null, "Bienvenido");
+//                JOptionPane.showMessageDialog(null, "Bienvenido");
             }
         });
     }
@@ -339,11 +315,9 @@ void po(){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnaceptar;
     private javax.swing.JButton btnsalir;
-    private javax.swing.JComboBox<String> cboad;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField txtcontra;

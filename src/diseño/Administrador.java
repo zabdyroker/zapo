@@ -44,13 +44,11 @@ public class Administrador extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
@@ -113,30 +111,6 @@ public class Administrador extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem4);
 
-        jMenuItem5.setText("Ventas");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem5);
-
-        jMenuItem6.setText("Ventas Temporales");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem6);
-
-        jMenuItem7.setText("Catalogo de Venta");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem7);
-
         jMenuItem8.setText("Catalogo de Caja");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,23 +143,28 @@ public class Administrador extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem11);
 
-        jMenuItem12.setText("jMenuItem12");
+        jMenuBar1.add(jMenu2);
+
+        jMenu4.setIcon(new javax.swing.ImageIcon("C:\\Users\\zabdy\\Documents\\tienda\\src\\Imagenes\\reportes.JPG")); // NOI18N
+        jMenu4.setText("Movimientos ");
+
+        jMenuItem12.setText(" Realizar venta");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem12ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem12);
+        jMenu4.add(jMenuItem12);
 
-        jMenuItem13.setText("jMenuItem13");
+        jMenuItem13.setText("Corte General ");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem13ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem13);
+        jMenu4.add(jMenuItem13);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenu4);
 
         jMenu3.setIcon(new javax.swing.ImageIcon("C:\\Users\\zabdy\\Documents\\tienda\\src\\Imagenes\\archivo.jpg")); // NOI18N
         jMenu3.setText("Archivo");
@@ -271,30 +250,6 @@ public class Administrador extends javax.swing.JFrame {
         jLabel1.add(usu);
     usu.show();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
-
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-        TbVenta usu= new TbVenta();
-        jLabel1.add(usu);
-    usu.show();
-//  Boleta bol = new Boleta();
-  //  jLabel1.add(bol);
-    //bol.show();
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
-
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-        ventas_temporales usu= new ventas_temporales();
-        jLabel1.add(usu);
-    usu.show();
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-                catalogoventa usu= new catalogoventa();
-        jLabel1.add(usu);
-    usu.show();
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
@@ -387,6 +342,7 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -396,9 +352,6 @@ public class Administrador extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     public static javax.swing.JLabel lblusu;
