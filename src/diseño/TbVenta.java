@@ -5,12 +5,15 @@
  */
 package diseño;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ComboBoxEditor;
@@ -34,6 +37,8 @@ public class TbVenta extends javax.swing.JInternalFrame {
     bloquear();
         cataloVENTAS("");
     cat_produ();
+     txtfecha.setDisabledTextColor(Color.blue);
+        txtfecha.setText(fechaact());
     }
     String folio = "";
 
@@ -126,7 +131,6 @@ public class TbVenta extends javax.swing.JInternalFrame {
         txtNombreCliente = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         txtNomUsuario = new javax.swing.JTextField();
-        jButton7 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         botonventas = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -236,13 +240,6 @@ public class TbVenta extends javax.swing.JInternalFrame {
 
         jLabel12.setText("Nombre del Usuario");
 
-        jButton7.setText("venta");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -305,9 +302,7 @@ public class TbVenta extends javax.swing.JInternalFrame {
                                 .addGap(118, 118, 118)
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton7)))))
+                                .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(46, 46, 46))
         );
         jPanel2Layout.setVerticalGroup(
@@ -332,16 +327,11 @@ public class TbVenta extends javax.swing.JInternalFrame {
                     .addComponent(jLabel5)
                     .addComponent(comboidcatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jButton7)))
-                .addGap(14, 14, 14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel8)
@@ -486,7 +476,15 @@ public class TbVenta extends javax.swing.JInternalFrame {
 // TODO add your handling code here:
 venta();
     }//GEN-LAST:event_botonventasActionPerformed
-void venta(){
+public static String fechaact(){
+    Date fecha= new Date();
+    SimpleDateFormat formatofecha= new SimpleDateFormat("dd/MM/YYYY");
+    return formatofecha.format(fecha);
+    
+
+
+}    
+    void venta(){
 conecta cc = new conecta();
         Connection cn = cc.conexion();
         String Total, vent,Fecha,cant,pesouni,iva;
@@ -698,15 +696,7 @@ conecta cc = new conecta();
             JOptionPane.showMessageDialog(null, e);
         }
     }//GEN-LAST:event_combovenActionPerformed
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-        ventaDeldia s= new ventaDeldia();
-         
     
-        jPanel1.add(s);
-    s.setVisible(jPanel1);
-    }//GEN-LAST:event_jButton7ActionPerformed
     void datocj() {
 
         String sql = "select * from cat_cajas";
@@ -868,7 +858,6 @@ conecta cc = new conecta();
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

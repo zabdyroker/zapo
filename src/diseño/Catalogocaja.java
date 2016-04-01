@@ -31,6 +31,7 @@ public class Catalogocaja extends javax.swing.JInternalFrame {
         bloquear();
         datocj();
   codigosclientes();
+  //llenarPaises();
     }
      String idcaja;
     /**
@@ -304,7 +305,27 @@ public class Catalogocaja extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
- void codigosclientes(){
+public void llenarPaises(){
+        String SQL="select * from users order by user_name;";
+        String datos[]=new String[2];
+        
+        try{
+         //   cn.Conectar();
+           // cn.st=cn.conec.createStatement();
+            //cn.rt=cn.st.executeQuery(SQL);
+            Statement st = cn.createStatement();
+         ResultSet rs =st.executeQuery(SQL);
+            while (rs.next()){
+              
+            datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                combo1.addItem(datos[0]+"-"+datos[1]);
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.toString());
+        }
+    }
+    void codigosclientes(){
      int j;
         int cont=1;
         String num="";
